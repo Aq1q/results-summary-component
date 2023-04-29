@@ -22,18 +22,19 @@ Users should be able to:
 - See hover and focus states for all interactive elements on the page
 
 ### Screenshot
+![](./screenshot.png)
 
 ### Links
 
-- Solution URL:
-- Live Site URL: 
+- Solution URL: [results-summary-component](https://github.com/Aq1q/results-summary-component)
+- Live Site URL: [results-summary-component]
 
 ## My process
 
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
+- CSS
 - Sass
 - Flexbox
 - Mobile-first workflow
