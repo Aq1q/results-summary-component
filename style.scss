@@ -24,23 +24,24 @@ $Dark-gray-blue: hsl(224, 30%, 27%);
     }
 }
 
-@mixin corners {
-    position: absolute;
-    border: 3px solid red;
-    z-index: -1;
-}
-
 *{
     font-family: 'Hanken Grotesk' !important;
     box-sizing: border-box;
+}
+
+html{
+    height: 100%;
 }
 
 body{
     font-size: 18px;
     height: 100%;
 }
+
 .container {
     height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 #final-box{
@@ -146,14 +147,73 @@ body{
     }
 }
 
-.score-box{
-    position: relative;
+#btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 20%;
+    padding: 15px;
+    border-radius: 60px;
+    border: 0px;
+    background-color: $Dark-gray-blue;
+    color: $white;
+    font-weight: 500;
+    font-size: 1.2em;
+    cursor: pointer;
 }
-.tl{
-        @include corners;
-        width: 10px;
-        height: 10px;
-        left: 0px;
-        top: 0px;
-        border-radius: 10px;
+#btn:active{
+    background: linear-gradient(0deg, $Light-royal-blue, $Light-slate-blue);
+}
+.attribution {
+    font-size: 0.5em;
+    position: absolute;
+    bottom: 1px;
+    width: 100%;
+    text-align: center;
+}
+
+@media screen and (min-width: 1300px) {
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .container{
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        height: 45%;
+        min-height: 445px;
+        box-shadow:  12px 12px 10px 1px $pale-blue;
+        border-radius: 30px 0 0 30px;
+
+    }
+    #final-box {
+        height: 100%;
+        justify-content: center;
+        width: 50%;
+        border-radius: 30px;
+        gap: 30px;
+        .score-circle{
+            width: 50%;
+            height: 180.1px;
+            h1{
+                font-size: 3em;
+            }
+            p{
+                font-size: 0.9;
+            }
+        }
+        #score-info {
+            p{
+                font-size: 1em;
+            }
+        }
+    }
+    
+    #score-box{
+        width: 50%;
+    }
 }
